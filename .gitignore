@@ -1,0 +1,9 @@
+.idea
+
+/var/cache/*
+/var/log/*
+/var/sessions/*
+
+!/var/cache/.gitkeep
+!/var/log/.gitkeep
+!/var/sessions/.gitkeep
