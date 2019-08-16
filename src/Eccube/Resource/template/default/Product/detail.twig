@@ -322,7 +322,7 @@ file that was distributed with this source code.
                             </div>
                             <div class="ec-productRole__btn">
                                 <button type="submit" class="ec-blockBtn--action add-cart">
-                                    {{ 'カートに入れる'|trans }}
+                                    {{ 'front.product.add_cart'|trans }}
                                 </button>
                             </div>
                         {% else %}
@@ -341,11 +341,11 @@ file that was distributed with this source code.
                             <label for="ec-modal-checkbox" class="ec-modal-overlay-close"></label>
                             <div class="ec-modal-wrap">
                                 <label for="ec-modal-checkbox" class="ec-modal-close"><span class="ec-icon"><img src="{{ asset('assets/icon/cross-dark.svg') }}" alt=""/></span></label>
-                                <div id="ec-modal-header" class="text-center">{{ 'カートに追加しました。'|trans }}</div>
+                                <div id="ec-modal-header" class="text-center">{{ 'front.product.add_cart_complete'|trans }}</div>
                                 <div class="ec-modal-box">
                                     <div class="ec-role">
-                                        <label for="ec-modal-checkbox" class="ec-inlineBtn--cancel">{{ 'お買い物を続ける'|trans }}</label>
-                                        <a href="{{ url('cart') }}" class="ec-inlineBtn--action">{{ 'カートへ進む'|trans }}</a>
+                                        <label for="ec-modal-checkbox" class="ec-inlineBtn--cancel">{{ 'front.product.continue'|trans }}</label>
+                                        <a href="{{ url('cart') }}" class="ec-inlineBtn--action">{{ 'common.go_to_cart'|trans }}</a>
                                     </div>
                                 </div>
                             </div>

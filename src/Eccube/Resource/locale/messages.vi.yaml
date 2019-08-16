@@ -16,7 +16,7 @@ common.delete: Delete
 common.ok: OK
 common.cancel: Cancel
 common.go_to_top: Back to Home
-common.go_to_cart: Proceed to Cart
+common.go_to_cart: Xem giỏ hàng
 common.go_to_confirm: Review
 common.go_to_next: Next
 common.move_to_page_top: Page top
@@ -262,8 +262,8 @@ front.product.search__category_not_found: No category is found
 front.product.search__product_not_found: No product is found
 front.product.search_result__keyword:  Search results for ''%name%''
 front.product.search_result__detail: '<span class="ec-font-bold">%count% item(s)</span><span> found</span>'
-front.product.add_cart: Add to Cart
-front.product.add_cart_complete: The item has been added to the cart.
+front.product.add_cart: Thêm vào giỏ hàng
+front.product.add_cart_complete: Sản phẩm đã được thêm vào giỏ hàng.
 front.product.add_cart_error: You have failed to add the item to the cart.
 front.product.add_favorite: Add to Favorites
 front.product.add_favorite_alrady: The item is already in the Favorites.
@@ -274,7 +274,7 @@ front.product.normal_price: Regular Price
 front.product.sale_price: Selling Price
 front.product.code: SKU
 front.product.related_category: Related Category
-front.product.continue: Continue Shopping
+front.product.continue: Tiếp tục mua sắm
 front.product.invalid_quantity: Please enter more than 1.
 front.product.product_class_unselected: The item is not selected.
 
