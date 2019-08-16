@@ -88,9 +88,9 @@ common.name.suffix: ''
 
 front.block.cart.go_to_cart: Proceed to Cart
 front.block.cart.no_item: Chưa có sản phẩm nào trong giỏ hàng của bạn.
-front.block.footer.about_us: About Us
-front.block.footer.privacy_policy: Privacy Policy
-front.block.footer.inquiry: Contact Us
+front.block.footer.about_us: Về chúng tôi
+front.block.footer.privacy_policy: Chính sách bảo mật
+front.block.footer.inquiry: Liên hệ với chúng tôi
 front.block.footer.act_on_specified_commercial_transactions: Shipping & Returns
 front.block.category.list: All Categories
 front.block.category.category__en: CATEGORIES
@@ -115,8 +115,8 @@ front.block.new_item.item_2_name: Cherry Ice Cream Sandwiches
 front.block.new_item.item_2_price: $800 (tax incl.)
 front.block.new_item.item_3_name: "Colorful Gelato: 'CUBE' NEO"
 front.block.new_item.item_3_price: $600 (tax incl.)
-front.block.news.title__en: WHAT'S NEW
-front.block.news.title__ja: What's New
+front.block.news.title__en: Tin tức
+front.block.news.title__ja: Có gì mới?
 front.block.news.read_more: More
 front.block.news.see_details: Read details
 front.block.login.customer_registration: Sign up
