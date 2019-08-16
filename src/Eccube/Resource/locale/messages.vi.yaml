@@ -5,7 +5,7 @@
 common.select: Please select
 common.select__pref: Select prefecture
 common.select__unspecified: Unspecified
-common.select__all_products: All Products
+common.select__all_products: Tất cả sản phẩm
 common.required: Required
 common.back: Go back
 common.close: Close
@@ -72,7 +72,7 @@ common.remember_me: Remember me
 common.signup: Sign up
 common.forgot_login: Unable to sign in?
 common.customer_address_count_is_over: You already have max number of addresses (%eccube_deliv_addr_max% items). If you want to add a new one, please delete or overwrite the item(s) you have on the list.
-common.search_keyword: Enter keywords
+common.search_keyword: Nhập từ khóa
 common.delete_confirm: Do you want to continue?
 common.pagetop: Page top
 common.name.prefix: ''
@@ -87,7 +87,7 @@ common.name.suffix: ''
 #------------------------------------------------------------------------------------
 
 front.block.cart.go_to_cart: Proceed to Cart
-front.block.cart.no_item: Your cart is empty.
+front.block.cart.no_item: Chưa có sản phẩm nào trong giỏ hàng của bạn.
 front.block.footer.about_us: About Us
 front.block.footer.privacy_policy: Privacy Policy
 front.block.footer.inquiry: Contact Us
