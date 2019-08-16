@@ -16,7 +16,7 @@ file that was distributed with this source code.
 
     <div class="ec-role">
         <div class="ec-pageHeader">
-            <h1>{{ 'ショッピングカート'|trans }}</h1>
+            <h1>{{ 'front.cart.title'|trans }}</h1>
         </div>
     </div>
 
@@ -87,7 +87,7 @@ file that was distributed with this source code.
         {% if totalQuantity > 0 %}
             <div class="ec-cartRole__totalText">
                 <p>
-                    {{ '商品の合計金額は「<strong>%price%</strong>」です。'|trans({ '%price%': totalPrice|price })|raw }}
+                    {{ 'front.cart.total_price'|trans({ '%price%': totalPrice|price })|raw }}
                 </p>
             </div>
             {% if Carts|length > 1 %}
@@ -202,11 +202,11 @@ file that was distributed with this source code.
                         {% endif %}
                     </div>
                     <div class="ec-cartRole__actions">
-                        <div class="ec-cartRole__total">{{ '合計：'|trans }}<span class="ec-cartRole__totalAmount">{{ Cart.totalPrice|price }}</span>
+                        <div class="ec-cartRole__total">{{ 'common.total__with_separator'|trans }}<span class="ec-cartRole__totalAmount">{{ Cart.totalPrice|price }}</span>
                         </div>
-                        <a class="ec-blockBtn--action" href="{{ path('cart_buystep', {'cart_key':cartKey}) }}">{{ 'レジに進む'|trans }}</a>
+                        <a class="ec-blockBtn--action" href="{{ path('cart_buystep', {'cart_key':cartKey}) }}">{{ 'front.cart.checkout'|trans }}</a>
                         {% if loop.last %}
-                            <a class="ec-blockBtn--cancel" href="{{ path('homepage') }}">{{ 'お買い物を続ける'|trans }}</a>
+                            <a class="ec-blockBtn--cancel" href="{{ path('homepage') }}">{{ 'front.cart.continue'|trans }}</a>
                         {% endif %}
                     </div>
                 {% endfor %}

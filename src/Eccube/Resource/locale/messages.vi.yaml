@@ -58,7 +58,7 @@ common.quantity__with_separator: 'Qty:'
 common.subtotal: Subtotal
 common.subtotal__with_separator: 'Subtotal:'
 common.total: Total
-common.total__with_separator: 'Total:'
+common.total__with_separator: 'Tổng tiền:'
 common.delivery_fee: Shipping Charge
 common.charge: Charges
 common.discount: Discount
@@ -282,19 +282,19 @@ front.product.product_class_unselected: The item is not selected.
 # Cart
 #------------------------------------------------------------------------------------
 
-front.cart.title: Shopping Cart
+front.cart.title: Giỏ Hàng
 front.cart.nav__cart_items: Cart
 front.cart.nav__customer_info: Customer Information
 front.cart.nav__order: Checkout
 front.cart.nav__confirm: Review
 front.cart.nav__complete: Order Placed
-front.cart.total_price: 'Total: <strong>%price%</strong>'
+front.cart.total_price: 'Tổng cộng: <strong>%price%</strong>'
 front.cart.divide_cart: Some item(s) in the cart can not be purchased in this order.
 front.cart.delete: ''
 front.cart.delete__confirm: Are you sure to delete this item from the cart?
 front.cart.product: Items
-front.cart.checkout: Proceed to Checkout
-front.cart.continue: Continue shopping
+front.cart.checkout: Tiến hành mua hàng
+front.cart.continue: Tiếp tục mua sắm
 front.cart.no_items: Your cart is empty.
 front.cart.delivery_fee_free__now: Shipping charge is waived.
 front.cart.delivery_fee_free__price_and_quantity: <strong class="ec-color-red">Free shipping</strong> with the purchase of <strong>%price%</strong>, or <strong>%quantity% item(s)</strong>.
