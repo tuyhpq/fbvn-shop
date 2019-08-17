@@ -51,23 +51,23 @@ class NonMemberType extends AbstractType
             ->add('name', NameType::class, [
                 'required' => true,
             ])
-            ->add('kana', KanaType::class, [
-                'required' => true,
-            ])
-            ->add('company_name', TextType::class, [
-                'required' => false,
-                'constraints' => [
-                    new Assert\Length([
-                        'max' => $this->eccubeConfig['eccube_stext_len'],
-                    ]),
-                ],
-            ])
-            ->add('postal_code', PostalType::class, [
-                'required' => true,
-            ])
-            ->add('address', AddressType::class, [
-                'required' => true,
-            ])
+//            ->add('kana', KanaType::class, [
+//                'required' => true,
+//            ])
+//            ->add('company_name', TextType::class, [
+//                'required' => false,
+//                'constraints' => [
+//                    new Assert\Length([
+//                        'max' => $this->eccubeConfig['eccube_stext_len'],
+//                    ]),
+//                ],
+//            ])
+//            ->add('postal_code', PostalType::class, [
+//                'required' => true,
+//            ])
+//            ->add('address', AddressType::class, [
+//                'required' => true,
+//            ])
             ->add('phone_number', PhoneNumberType::class, [
                 'required' => true,
             ])

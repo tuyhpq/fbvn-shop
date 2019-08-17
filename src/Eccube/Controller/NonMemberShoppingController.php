@@ -62,7 +62,8 @@ class NonMemberShoppingController extends AbstractShoppingController
         PrefRepository $prefRepository,
         OrderHelper $orderHelper,
         CartService $cartService
-    ) {
+    )
+    {
         $this->validator = $validator;
         $this->prefRepository = $prefRepository;
         $this->orderHelper = $orderHelper;
@@ -110,15 +111,15 @@ class NonMemberShoppingController extends AbstractShoppingController
             $Customer
                 ->setName01($data['name01'])
                 ->setName02($data['name02'])
-                ->setKana01($data['kana01'])
-                ->setKana02($data['kana02'])
-                ->setCompanyName($data['company_name'])
+                ->setKana01('ナ')// unspecified
+                ->setKana02('ナ')// unspecified
+                ->setCompanyName('unspecified')// unspecified
                 ->setEmail($data['email'])
                 ->setPhonenumber($data['phone_number'])
-                ->setPostalcode($data['postal_code'])
-                ->setPref($data['pref'])
-                ->setAddr01($data['addr01'])
-                ->setAddr02($data['addr02']);
+                ->setPostalcode('555')// unspecified
+                ->setPref($this->prefRepository->find(1))// unspecified
+                ->setAddr01('Vietnam')// unspecified
+                ->setAddr02('Vietnam'); // unspecified
 
             // 非会員用セッションを作成
             $this->session->set(OrderHelper::SESSION_NON_MEMBER, $Customer);
