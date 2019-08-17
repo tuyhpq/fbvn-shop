@@ -16,7 +16,7 @@ file that was distributed with this source code.
 
 <div class="ec-role">
     <div class="ec-pageHeader">
-        <h1>{{ 'ご注文内容のご確認'|trans }}</h1>
+        <h1>{{ 'front.shopping.confirm_title'|trans }}</h1>
     </div>
 </div>
 
@@ -66,21 +66,21 @@ file that was distributed with this source code.
         <div class="ec-orderRole__detail">
             <div class="ec-orderAccount">
                 <div class="ec-rectHeading">
-                    <h2>{{ 'お客様情報'|trans }}</h2>
+                    <h2>{{ 'front.shopping.customer_info'|trans }}</h2>
                 </div>
                 <div class="ec-orderAccount__account">
                     <p class="ec-halfInput">{{ ''|trans }}{{ Order.name01 }} {{ Order.name02 }}</span>{{ ' 様'|trans }}</p>
-                    <p class="ec-halfInput">{{ Order.kana01 }}</span> {{ Order.kana02 }}</p>
-                    <p class="ec-input">{{ Order.companyName }}</span></p>
-                    <p class="ec-zipInput">{{ '〒'|trans }}{{ Order.postal_code }}</p>
-                    <p class="ec-input">{{ Order.pref }}{{ Order.addr01 }}{{ Order.addr02 }}</p>
+                    <p class="ec-halfInput hidden">{{ Order.kana01 }}</span> {{ Order.kana02 }}</p>
+                    <p class="ec-input hidden">{{ Order.companyName }}</span></p>
+                    <p class="ec-zipInput hidden">{{ '〒'|trans }}{{ Order.postal_code }}</p>
+                    <p class="ec-input hidden">{{ Order.pref }}{{ Order.addr01 }}{{ Order.addr02 }}</p>
                     <p class="ec-telInput">{{ Order.phone_number }}</span></p>
                     <p class="ec-input">{{ Order.email }}</span></p>
                 </div>
             </div>
             <div class="ec-orderDelivery">
                 <div class="ec-rectHeading">
-                    <h2>{{ '配送情報'|trans }}</h2>
+                    <h2>{{ 'front.shopping.delivery_info'|trans }}</h2>
                 </div>
                 {% for shipping in Order.shippings %}
                     {% set idx = loop.index0 %}
@@ -105,12 +105,12 @@ file that was distributed with this source code.
                             {% endfor %}
                         </ul>
                     </div>
-                    <div class="ec-orderDelivery__address">
+                    <div class="ec-orderDelivery__address hidden">
                         <p>{{ ''|trans }}{{ shipping.name01 }} {{ shipping.name02 }} ({{ shipping.kana01 }} {{ shipping.kana02 }}){{ ' 様'|trans }}</p>
                         <p>{{ '〒'|trans }}{{ shipping.postal_code }} {{ shipping.pref }}{{ shipping.addr01 }}{{ shipping.addr02 }}</p>
                         <p>{{ shipping.phone_number }}</p>
                     </div>
-                    <div class="ec-orderDelivery__actions">
+                    <div class="ec-orderDelivery__actions hidden">
                         <div class="ec-selects">
                             <div class="ec-select">
                                 <label>{{ '配送方法'|trans }}</label>
@@ -134,7 +134,7 @@ file that was distributed with this source code.
             </div>
             <div class="ec-orderPayment">
                 <div class="ec-rectHeading">
-                    <h2>{{ 'お支払方法'|trans }}</h2>
+                    <h2>{{ 'front.shopping.payment_info'|trans }}</h2>
                 </div>
                 <div class="ec-blockRadio">
                     {% set charge = 0 %}
@@ -156,7 +156,7 @@ file that was distributed with this source code.
             {% endif %}
             <div class="ec-orderConfirm">
                 <div class="ec-rectHeading">
-                    <h2>{{ 'お問い合わせ'|trans }}</h2>
+                    <h2>{{ 'front.shopping.message_info'|trans }}</h2>
                 </div>
                 <div class="ec-input">
                     {{ Order.message|nl2br }}
@@ -193,8 +193,8 @@ file that was distributed with this source code.
                     </dl>
                 {% endif %}
                 <div class="ec-totalBox__btn">
-                    <button type="submit" class="ec-blockBtn--action">{{ '注文する'|trans }}</button>
-                    <a href="{{ url('shopping') }}" class="ec-blockBtn--cancel">{{ 'ご注文手続きに戻る'|trans }}</a>
+                    <button type="submit" class="ec-blockBtn--action">{{ 'front.shopping.checkout'|trans }}</button>
+                    <a href="{{ url('shopping') }}" class="ec-blockBtn--cancel">{{ 'front.shopping.back_to_order'|trans }}</a>
                 </div>
             </div>
         </div>

@@ -305,7 +305,7 @@ front.cart.delivery_fee_free__quantity: <strong class="ec-color-red">Free shippi
 # Shopping
 #------------------------------------------------------------------------------------
 
-front.shopping.title: Quy Trình Mua Hàng
+front.shopping.title: Thông Tin Thanh Toán
 front.shopping.order_no: Order No.
 front.shopping.customer_info: Thông tin khách hàng
 front.shopping.delivery_info: Danh sách sản phẩm
@@ -334,9 +334,9 @@ front.shopping.shipping_send_selected_shipping: Deliver to the selected address
 front.shopping.shipping_multiple_title: Deliver to Multiple Addresses
 front.shopping.shipping_multiple_message: Please select a delivery address for each item.
 front.shppping.shipping_multiple_add_shipping: Please select a delivery address for each item.
-front.shopping.confirm_title: Review Your Order
-front.shopping.checkout: Place an Order
-front.shopping.back_to_order: Go back to Checkout
+front.shopping.confirm_title: Xác Nhận Đơn Hàng
+front.shopping.checkout: Đặt hàng
+front.shopping.back_to_order: Quay lại
 front.shopping.complete_title: Order Placed
 front.shopping.complete_message__title: Thank you for your oder!
 front.shopping.complete_message__body: |
