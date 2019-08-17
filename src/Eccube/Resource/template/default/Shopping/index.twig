@@ -347,12 +347,21 @@ file that was distributed with this source code.
                         <h2>{{ 'front.shopping.payment_info'|trans }}</h2>
                     </div>
                     <div class="ec-radio">
+                        {% set isCard = false %}
                         {% for key, child in form.Payment %}
                             <div style="display: block;">
                                 {% set Payment = form.Payment.vars.choices[key].data %}
                                 {{ form_widget(child, { 'attr': { 'data-trigger': 'change' }}) }}
                                 {% if Payment.payment_image is not null %}
                                     <p><img src="{{ asset(Payment.payment_image, 'save_image') }}"></p>
+                                {% endif %}
+                                {% if child.vars.checked and child.vars.label == 'Thẻ cào (Viettel, Mobifone, Zing)' %}
+                                    {% set isCard = true %}
+                                    <div style="margin-top:1rem;background-color:#ffd;padding:1rem">
+                                        <div style="color: #0241e0">Vui lòng điền thẻ cào vào mục Ghi chú phía dưới với mẫu sau:</div>
+                                        <div><strong>Loại thẻ cào / Mệnh giá / Số seri / Mã nạp</strong></div>
+                                        <div style="margin-top: 1rem">Ví dụ: <strong>Viettel/50/1000123456789/214387654678971</strong></div>
+                                    </div>
                                 {% endif %}
                             </div>
                         {% endfor %}
@@ -373,10 +382,16 @@ file that was distributed with this source code.
                 {% endif %}
                 <div class="ec-orderConfirm">
                     <div class="ec-rectHeading">
-                        <h2>{{ 'front.shopping.message_info'|trans }}</h2>
+                        <h2>
+                            {% if isCard %}
+                                {{ 'Thông tin thẻ cào' }}
+                            {% else %}
+                                {{ 'front.shopping.message_info'|trans }}
+                            {% endif %}
+                        </h2>
                     </div>
                     <div class="ec-input">
-                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'front.shopping.message_placeholder'|trans, 'rows': '6'}}) }}
+                        {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'front.shopping.message_placeholder'|trans, 'rows': '6', 'required': isCard }}) }}
                         {{ form_errors(form.message) }}
                     </div>
                 </div>

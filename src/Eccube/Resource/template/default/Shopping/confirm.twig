@@ -12,6 +12,20 @@ file that was distributed with this source code.
 
 {% form_theme form 'Form/form_div_layout.twig' %}
 
+{% block javascript %}
+<script>
+    $(function () {
+        if ($('#cb_confirm').length > 0) {
+            $('#btn_submit').prop('disabled', true);
+
+            $('#cb_confirm').change(function () {
+                $('#btn_submit').prop('disabled', !this.checked);
+            });
+        }
+    });
+</script>
+{% endblock javascript %}
+
 {% block main %}
 
 <div class="ec-role">
@@ -137,11 +151,47 @@ file that was distributed with this source code.
                     <h2>{{ 'front.shopping.payment_info'|trans }}</h2>
                 </div>
                 <div class="ec-blockRadio">
-                    {% set charge = 0 %}
-                    {% for item in Order.order_items if item.isCharge %}
-                        {% set charge = item.total_price %}
-                    {% endfor %}
-                    {{ Order.Payment }}({{ charge|price }})
+                    {{ Order.Payment }}
+                    <div style="margin-top:1rem;background-color:#ffd;padding:1rem">
+                        {% if Order.Payment == 'MoMo' %}
+                            <div class="lead success" style="color: #0241e0">Vui lòng chuyển khoản với thông tin bên dưới. Chúng tôi sẽ kiểm tra và xử lý đơn hàng của bạn.</div>
+                            <div>Tài khoản MoMo: <strong>0348403817</strong> (HUA PHU QUY)</div>
+                            <div>Nội dung chuyển khoản: <strong>MOMO{{ Order.order_no }}</strong></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="cb_confirm"> Tôi đã chuyển khoản
+                                </label>
+                            </div>
+                        {% elseif Order.Payment == 'ZaloPay' %}
+                            <div class="lead success" style="color: #0241e0">Vui lòng chuyển khoản với thông tin bên dưới. Chúng tôi sẽ kiểm tra và xử lý đơn hàng của bạn.</div>
+                            <div>Tài khoản ZaloPay: <strong>0348403817</strong> (HUA PHU QUY)</div>
+                            <div>Nội dung chuyển khoản: <strong>ZALOPAY{{ Order.order_no }}</strong></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="cb_confirm"> Tôi đã chuyển khoản
+                                </label>
+                            </div>
+                        {% elseif Order.Payment == 'Chuyển khoản ngân hàng' %}
+                            <div class="lead success" style="color: #0241e0">Vui lòng chuyển khoản với thông tin bên dưới. Chúng tôi sẽ kiểm tra và xử lý đơn hàng của bạn.</div>
+                            <div>Vietcombank: <strong>0921000722262</strong> (HUA PHU QUY), chi nhánh Bến Nghé, quận 1, TP.HCM</div>
+                            <div>Nội dung chuyển khoản: <strong>ATM{{ Order.order_no }}</strong></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="cb_confirm"> Tôi đã chuyển khoản
+                                </label>
+                            </div>
+                        {% elseif Order.Payment == 'Thẻ cào (Viettel, Mobifone, Zing)' %}
+                            <div class="lead success" style="color: #0241e0">Vui lòng kiểm tra lại thông tin thẻ cào bên dưới, đảm bảo các thông tin đó là chính xác. Chúng tôi sẽ kiểm tra và xử lý đơn
+                                hàng của bạn.
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="cb_confirm"> Tôi đã kiểm tra
+                                </label>
+                            </div>
+                        {% endif %}
+                        <div style="color: #0241e0">Nếu giao dịch thành công. Chúng tôi sẽ gửi sản phẩm đến địa chỉ Email mà bạn đã cung cấp.</div>
+                    </div>
                 </div>
             </div>
             {% if BaseInfo.isOptionPoint and Order.Customer is not null %}
@@ -193,7 +243,7 @@ file that was distributed with this source code.
                     </dl>
                 {% endif %}
                 <div class="ec-totalBox__btn">
-                    <button type="submit" class="ec-blockBtn--action">{{ 'front.shopping.checkout'|trans }}</button>
+                    <button type="submit" class="ec-blockBtn--action" id="btn_submit">{{ 'front.shopping.checkout'|trans }}</button>
                     <a href="{{ url('shopping') }}" class="ec-blockBtn--cancel">{{ 'front.shopping.back_to_order'|trans }}</a>
                 </div>
             </div>
