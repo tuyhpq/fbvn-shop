@@ -11,7 +11,7 @@ common.back: Go back
 common.close: Close
 common.send: Submit
 common.registration: Save
-common.change: Change
+common.change: Cập nhật
 common.delete: Delete
 common.ok: OK
 common.cancel: Cancel
