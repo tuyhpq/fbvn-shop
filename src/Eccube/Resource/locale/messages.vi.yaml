@@ -13,13 +13,13 @@ common.send: Submit
 common.registration: Save
 common.change: Cập nhật
 common.delete: Delete
-common.ok: OK
-common.cancel: Cancel
+common.ok: Đồng ý
+common.cancel: Hủy
 common.go_to_top: Back to Home
 common.go_to_cart: Xem giỏ hàng
 common.go_to_confirm: Review
 common.go_to_next: Next
-common.move_to_page_top: Page top
+common.move_to_page_top: Đầu trang
 common.prev: Previous
 common.next: Next
 common.first: First
@@ -305,16 +305,16 @@ front.cart.delivery_fee_free__quantity: <strong class="ec-color-red">Free shippi
 # Shopping
 #------------------------------------------------------------------------------------
 
-front.shopping.title: Checkout
+front.shopping.title: Quy Trình Mua Hàng
 front.shopping.order_no: Order No.
-front.shopping.customer_info: Customer Information
-front.shopping.delivery_info: Delivery Information
+front.shopping.customer_info: Thông tin khách hàng
+front.shopping.delivery_info: Danh sách sản phẩm
 front.shopping.delivery_to: Delivery to
 front.shopping.delivery_provider: Delivery Method
 front.shopping.delivery_date: Delivery Date
 front.shopping.delivery_time: Delivery Time
 front.shopping.to_multiple: Add Delivery Address
-front.shopping.payment_info: Payment Method
+front.shopping.payment_info: Phương thức thanh toán
 front.shopping.point_info: Your Points
 front.shopping.available_point: 'You have %point% pts.'
 front.shopping.point_prev: Points Used
@@ -322,10 +322,10 @@ front.shopping.prev_point: Points before This Order
 front.shopping.next_point: Points after This Order
 front.shopping.add_point: Points Earned
 front.shopping.use_point: Points Used
-front.shopping.message_info: Message to Store
-front.shopping.message_placeholder: Please enter your message here (Max. 3,000 chars)
-front.shopping.go_to_confirm: Review
-front.shopping.back_to_cart: Go Back to Cart
+front.shopping.message_info: Ghi chú cho cửa hàng
+front.shopping.message_placeholder: Vui lòng nhập tin nhắn của bạn ở đây (Tối đa 3.000 ký tự)
+front.shopping.go_to_confirm: Xác nhận
+front.shopping.back_to_cart: Quay lại giỏ hàng
 front.shopping.shipping_title: Select a Delivery Address
 front.shopping.shipping_add_new_shipping: Add a New Delivery Address
 front.shopping.shipping_add_new_shipping__short: Add an Address
