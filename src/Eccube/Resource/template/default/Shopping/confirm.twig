@@ -27,33 +27,33 @@ file that was distributed with this source code.
             <li class="ec-progress__item">
                 <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
                 </div>
-                <div class="ec-progress__label">{{ 'カートの商品'|trans }}
+                <div class="ec-progress__label">{{ 'front.cart.nav__cart_items'|trans }}
                 </div>
             </li>
             {% if is_granted('ROLE_USER') == false %}
                 <li class="ec-progress__item">
                     <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
                     </div>
-                    <div class="ec-progress__label">{{ 'お客様情報'|trans }}
+                    <div class="ec-progress__label">{{ 'front.cart.nav__customer_info'|trans }}
                     </div>
                 </li>
             {% endif %}
             <li class="ec-progress__item">
                 <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
                 </div>
-                <div class="ec-progress__label">{{ 'ご注文手続き'|trans }}
+                <div class="ec-progress__label">{{ 'front.cart.nav__order'|trans }}
                 </div>
             </li>
             <li class="ec-progress__item is-complete">
                 <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
                 </div>
-                <div class="ec-progress__label">{{ 'ご注文内容確認'|trans }}
+                <div class="ec-progress__label">{{ 'front.cart.nav__confirm'|trans }}
                 </div>
             </li>
             <li class="ec-progress__item">
                 <div class="ec-progress__number">{{ step }}{% set step = step + 1 %}
                 </div>
-                <div class="ec-progress__label">{{ '完了'|trans }}
+                <div class="ec-progress__label">{{ 'front.cart.nav__complete'|trans }}
                 </div>
             </li>
         </ul>

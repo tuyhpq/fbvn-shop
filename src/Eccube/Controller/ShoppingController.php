@@ -65,7 +65,8 @@ class ShoppingController extends AbstractShoppingController
         MailService $mailService,
         OrderRepository $orderRepository,
         OrderHelper $orderHelper
-    ) {
+    )
+    {
         $this->cartService = $cartService;
         $this->mailService = $mailService;
         $this->orderRepository = $orderRepository;
@@ -199,7 +200,7 @@ class ShoppingController extends AbstractShoppingController
 
             try {
                 // リダイレクト先のチェック.
-                $pattern = '/^'.preg_quote($request->getBasePath(), '/').'/';
+                $pattern = '/^' . preg_quote($request->getBasePath(), '/') . '/';
                 $redirectTo = preg_replace($pattern, '', $redirectTo);
                 $result = $router->match($redirectTo);
                 // パラメータのみ抽出
@@ -647,7 +648,10 @@ class ShoppingController extends AbstractShoppingController
             return $this->redirectToRoute('shopping');
         }
 
+        return $this->redirectToRoute('shopping_nonmember');
+
         /* @var $form \Symfony\Component\Form\FormInterface */
+        /*
         $builder = $this->formFactory->createNamedBuilder('', CustomerLoginType::class);
 
         if ($this->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
@@ -671,6 +675,7 @@ class ShoppingController extends AbstractShoppingController
             'error' => $authenticationUtils->getLastAuthenticationError(),
             'form' => $form->createView(),
         ];
+        */
     }
 
     /**

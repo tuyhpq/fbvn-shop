@@ -283,11 +283,11 @@ front.product.product_class_unselected: The item is not selected.
 #------------------------------------------------------------------------------------
 
 front.cart.title: Giỏ Hàng
-front.cart.nav__cart_items: Cart
-front.cart.nav__customer_info: Customer Information
-front.cart.nav__order: Checkout
-front.cart.nav__confirm: Review
-front.cart.nav__complete: Order Placed
+front.cart.nav__cart_items: Giỏ hàng
+front.cart.nav__customer_info: Xác minh
+front.cart.nav__order: Thanh toán
+front.cart.nav__confirm: Xác nhận
+front.cart.nav__complete: Hoàn thành
 front.cart.total_price: 'Tổng cộng: <strong>%price%</strong>'
 front.cart.divide_cart: Some item(s) in the cart can not be purchased in this order.
 front.cart.delete: ''
